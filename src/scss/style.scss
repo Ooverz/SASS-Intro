@@ -1,0 +1,109 @@
+@import "var.scss";
+
+body {
+    font: 100% $fontMain;
+    color: $colorMain;
+    margin: 0;
+    padding: $padding - $padding;
+    background-color: $backColorMain;
+    overflow-x: hidden;
+    main {
+        padding: $padding;
+
+        article {
+            display: flex;
+            flex-wrap: wrap;
+            
+            section {
+                flex-grow: 1;
+                flex-basis: 45%;
+                border: $border;
+                
+                @include shadow(10px 10px 15px -4px $colorMain);
+                
+                padding: $padding;
+                margin: 16px;
+                clear: both;
+                overflow: auto;
+                box-sizing: border-box;
+            }
+
+            section#selling-points {
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+
+            code {
+                background: $codeBackColor;
+                border: 1px solid $colorMain;
+                color: $codeColor;
+                page-break-inside: avoid;
+                font-family: monospace;
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 1.6em;
+                max-width: 100%;
+                overflow: auto;
+                padding: $padding;
+                display: block;
+                word-wrap: break-word;
+
+                .after {
+                    float: right;
+                    width: 40%;
+                }
+
+                .before {
+                    float: left;
+                    width: 40%;
+                }
+            }
+
+            .titleColor{
+                color: $colorTitle;
+                text-align: center;
+            }
+
+            h1 {
+                @extend .titleColor;
+            }
+            
+            h3 {
+                @extend .titleColor;
+                font-size: 1.5em;
+                padding: $padding * 2;
+                margin-bottom: 0px;
+            }
+
+            h2 {
+                @extend .titleColor;
+            }
+        }
+
+        .sharedForm {
+            border: $border;
+            padding: $padding;
+            color: $backColorMain;
+        }
+
+        .success {
+            @extend .sharedForm;
+            background-color: $successBackColor;
+        }
+    
+        .error {
+            @extend .sharedForm;
+            background-color: $errorBackColor;
+        }
+
+        .error:hover {
+            @extend .sharedForm;
+            background-color: $successBackColor;
+        }
+    
+        .warning {
+            @extend .sharedForm;
+            background-color: $warningBackColor;
+        }
+    }
+}

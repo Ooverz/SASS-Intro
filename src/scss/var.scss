@@ -1,0 +1,22 @@
+$fontMain : "Space Mono", monospace;
+$colorMain : #6b717f;
+$backColorMain : #fff;
+
+$border : 1px #8C8C8C solid;
+
+$codeBackColor : #000;
+$codeColor: #8C8C8C;
+
+$colorTitle : #BF4080;
+
+$successBackColor : green;
+$errorBackColor : red;
+$warningBackColor : orange;
+
+$padding : 16px;
+
+@mixin shadow($value){
+    -webkit-box-shadow : $value;
+    -moz-box-shadow : $value;
+    box-shadow : $value;
+}

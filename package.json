@@ -1,0 +1,18 @@
+{
+  "name": "learning-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+
+  "devDependencies": {},
+
+  "scripts": {
+    "scss": "node-sass --watch src/scss -o src/css --source-map true"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
